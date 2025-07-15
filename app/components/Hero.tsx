@@ -3,7 +3,7 @@ import TextAnimation from "./TextAnimation";
 
 export default function Hero() {
   return (
-    <div className="h-[90vh] p-20 flex flex-col items-start gap-20 justify-end">
+    <div className="h-[100vh] bg-[var(--background)] p-20 flex flex-col items-start gap-20 justify-end rounded-2xl">
       <div>
         <Image
           src={
@@ -18,18 +18,18 @@ export default function Hero() {
           digital experiences for a range of forward-thinking brands.
         </h2>
       </div>
-      <div className="flex items-center justify-between  w-full opacity-60">
-        <div>
+      <div className="flex items-center justify-between  w-full ">
+        <div className="opacity-60">
           <h3>Freelance</h3>
           <p>Digital Designer</p>
         </div>
-        <div>
+        <div className="opacity-60">
           <h3>Based in</h3>
           <p>Bristol</p>
         </div>
-        <div>
+        <div className="opacity-60 hover:opacity-100">
           <h3>Get in touch</h3>
-          <span>
+          <span className="cursor-pointer hover:opacity-100">
             <TextAnimation
               title="hello@joshwhite.design"
               semiTitle="hello@joshwhite.design"
