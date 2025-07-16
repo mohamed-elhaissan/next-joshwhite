@@ -3,15 +3,17 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="text-white flex flex-col gap-10 pt-40 px-20 tracking-tight">
-      <span className="text-4xl text-[#888888]">Have a project in mind?</span>
+    <div className="text-white flex flex-col gap-10 pt-40 md:px-20 px-5 tracking-tight">
+      <span className="md:text-4xl text-2xl text-[#888888]">
+        Have a project in mind?
+      </span>
       <div>
-        <h2 className="text-9xl">✺ Let's Chat</h2>
+        <h2 className="md:text-9xl text-7xl">✺ Let's Chat</h2>
       </div>
-      <Link href={"."} className="text-4xl">
+      <Link href={"."} className="md:text-4xl text-xl">
         hello@joshwhite.design
       </Link>
-      <div className="flex justify-between w-full p-5 border-t border-zinc-400 ">
+      <div className="flex justify-between items-center flex-col md:flex-row w-full p-5 border-t border-zinc-400 ">
         <span className="flex gap-5 items-center">
           <Link
             target="_blank"
