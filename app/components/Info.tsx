@@ -1,6 +1,8 @@
 import Link from "next/link";
-
+import LinkSvg from "../../public/LinkSvg.svg";
+import Image from "next/image";
 export default function Info() {
+
   return (
     <div className="bg-[var(--background)] flex flex-col justify-evenly  p-10 rounded-xl h-screen text-black">
       <h2 className="text-7xl ">Info</h2>
@@ -22,7 +24,10 @@ export default function Info() {
               world.
             </span>
             <Link className="font-semibold" href={"."}>
-              Read More
+              Read More{" "}
+              <span>
+                <Image src={LinkSvg} width={15} alt="Link svg" />
+              </span>
             </Link>
           </div>
         </div>

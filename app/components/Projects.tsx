@@ -7,7 +7,13 @@ import card3 from "../../public/projects/TsuQim3Z3RDteivU9MTOARfQvME.avif";
 import card4 from "../../public/projects/card-01.avif";
 import card5 from "../../public/projects/s6jQbCVk3i01aWALA8FM4Ax70fA.webp";
 import card6 from "../../public/projects/xcn8qNpAaTFuCmLRCApLCh0zc.webp";
-import { useScroll, useTransform } from "framer-motion";
+import img1 from "../../public/hovered/PRGl7sJhCiZ6Z6bv6CvmaHtilk.jpg";
+import img2 from "../../public/hovered/e5WKOA9fwSGgRHIgeOzsWJ9MuIA.avif";
+import img3 from "../../public/hovered/GUSYCDAJsvRHeNllaGOdiKk9IeQ.avif";
+import img4 from "../../public/hovered/qHtad1IB4xtYgCXEkTOr8BFuLk.webp";
+import img5 from "../../public/hovered/HJUfMOlFgyvqjauzByPGWTh32mU.avif";
+import img6 from "../../public/hovered/Ux7TdVnEXLGLP63XFAyGRyrLFfk.jpg";
+import { AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { StaticImageData } from "next/image";
@@ -19,6 +25,7 @@ export default function Projects() {
   });
   const x: any = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
   const images: StaticImageData[] = [card4, card6, card5, card3, card1, card2];
+  const hoveredImages: StaticImageData[] = [img1, img2, img3, img4, img5, img6];
   const titles: string[] = [
     "Lyle & Scott",
     "B!POD",
@@ -27,6 +34,7 @@ export default function Projects() {
     "Meermin",
     "Dockers",
   ];
+
   return (
     <div
       ref={targetContainer}
@@ -36,7 +44,12 @@ export default function Projects() {
         <h1 className="text-7xl py-20">Projects</h1>
         <motion.div style={{ x }} className="flex  w-full  gap-10">
           {images.map((item: StaticImageData, index: number) => (
-            <Card title={titles[index]} imageData={item} key={index} />
+            <Card
+              title={titles[index]}
+              imageData1={item}
+              imageData2={hoveredImages[index]}
+              key={index}
+            />
           ))}
         </motion.div>
       </div>
@@ -45,28 +58,83 @@ export default function Projects() {
 }
 
 const Card = ({
-  imageData,
+  imageData1,
+  imageData2,
   title,
 }: {
-  imageData: StaticImageData;
+  imageData1: StaticImageData;
+  imageData2: StaticImageData;
   title: string;
 }) => {
+  const DURATION = 0.25;
+  const STAGGER = 0.025;
   const [itemHovered, setItemHovered] = useState<boolean>(false);
-  return (
+  return(
     <div
       onMouseEnter={() => {
         setItemHovered(true);
       }}
       onMouseLeave={() => setItemHovered(false)}
-      className="min-w-[500px] cursor-pointer"
+      className="min-w-[500px] rounded-lg h-[330px]  overflow-hidden cursor-pointer"
     >
-      <Image
-        src={imageData}
-        alt={`${title}`}
-        width={550}
-        height={400}
-        className="rounded-lg    object-cover "
-      />
+      <AnimatePresence mode="wait">
+        {!itemHovered ? (
+          <motion.div
+            key={"image1"}
+            initial={{
+              opacity: 0.6,
+              scale: 0.9,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            exit={{
+              opacity: 0.9,
+            }}
+            transition={{
+              duration: DURATION,
+              ease: "easeInOut",
+            }}
+          >
+            <Image
+              src={imageData1}
+              alt={`${title}`}
+              width={550}
+              height={400}
+              className="    object-cover "
+            />
+          </motion.div>
+        ) : (
+          <motion.div
+            key={"image2"}
+            initial={{
+              opacity: 0,
+              scale: 0.8,
+            }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            exit={{
+              opacity: 0.9,
+              scale: 0.9,
+            }}
+            transition={{
+              duration: DURATION,
+              ease: "easeInOut",
+            }}
+          >
+            <Image
+              src={imageData2}
+              alt={`${title}`}
+              width={550}
+              height={400}
+              className="   object-cover "
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <motion.span
         initial={{

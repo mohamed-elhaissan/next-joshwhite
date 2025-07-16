@@ -3,7 +3,7 @@ import TextAnimation from "./TextAnimation";
 
 export default function Hero() {
   return (
-    <div className="h-[100vh] bg-[var(--background)] p-20 flex flex-col items-start gap-20 justify-end rounded-2xl">
+    <div className="h-[100vh]  bg-[var(--background)] p-10 sm:p-20 flex flex-col items-start gap-20 justify-end rounded-2xl">
       <div>
         <Image
           src={
@@ -13,7 +13,7 @@ export default function Hero() {
           height={100}
           alt="Logo"
         />
-        <h2 className="text-4xl mt-10 w-1/2">
+        <h2 className="w-full text-xl md:text-4xl mt-10 2xl:w-1/2">
           Bristol based digital designer crafting engaging, human-focused
           digital experiences for a range of forward-thinking brands.
         </h2>
