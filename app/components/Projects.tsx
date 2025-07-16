@@ -42,7 +42,7 @@ export default function Projects() {
     >
       <div className="sticky top-0 p-10 left-0 w-full flex   overflow-hidden h-screen  justify-start flex-col items-start">
         <h1 className="text-7xl py-20">Projects</h1>
-        <motion.div style={{ x }} className="flex  w-full  gap-10">
+        <motion.div style={{ x }} className="flex  w-full flex-wrap md:flex-nowrap gap-10">
           {images.map((item: StaticImageData, index: number) => (
             <Card
               title={titles[index]}
