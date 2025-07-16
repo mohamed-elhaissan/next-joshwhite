@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Info from "./components/Info";
@@ -8,8 +9,9 @@ export default function Home() {
     <div>
       <Header />
       <Hero />
-      <Projects/>
-      <Info/>
+      <Projects />
+      <Info />
+      <Footer />
     </div>
   );
 }
