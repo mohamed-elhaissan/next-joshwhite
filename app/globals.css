@@ -4,11 +4,11 @@
   --background: #f5f4f3;
   --foreground: #404040;
   --backgroundBlack: #050505;
+  --preLoaderBackground: #befc65;
 }
 
 body {
   font-family: var(--font-poppins), sans-serif;
-  /* background-color: var(--backgroundBlack); */
   overflow-x: hidden;
   background-color: #131314;
 }
