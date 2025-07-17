@@ -8,6 +8,7 @@
 
 body {
   font-family: var(--font-poppins), sans-serif;
-  background-color: var(--backgroundBlack);
+  /* background-color: var(--backgroundBlack); */
   overflow-x: hidden;
+  background-color: #131314;
 }

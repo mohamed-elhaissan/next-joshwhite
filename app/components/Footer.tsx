@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div className="text-white flex flex-col gap-10 pt-40 md:px-20 px-5 tracking-tight">
+    <div className=" flex flex-col gap-10 text-[#befc65] pt-40 md:px-20 px-5 tracking-tight">
       <span className="md:text-4xl text-2xl text-[#888888]">
         Have a project in mind?
       </span>
@@ -18,26 +18,26 @@ export default function Footer() {
           <Link
             target="_blank"
             href={"https://www.instagram.com/mohamed_elhaissan/"}
-            className="hover:text-[#e3f794]"
+            className="hover:text-[#befc65]"
           >
             <TextAnimation title="Instagram" semiTitle="Instagram" />
           </Link>
           <Link
             target="_blank"
             href={"https://x.com/mohamedelh46941"}
-            className="hover:text-[#e3f794]"
+            className="hover:text-[#befc65]"
           >
             <TextAnimation title="Twitter" semiTitle="Twitter" />
           </Link>
           <Link
             target="_blank"
             href={"https://github.com/mohamed-elhaissan/"}
-            className="hover:text-[#e3f794]"
+          className="hover:text-[#befc65]"
           >
             <TextAnimation title="Github" semiTitle="Github" />
           </Link>
         </span>
-        <span>&copy; JoshWhite Design</span>
+        <span>&copy; elhaissanDev</span>
       </div>
     </div>
   );

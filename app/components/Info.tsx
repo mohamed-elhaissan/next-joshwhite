@@ -3,7 +3,7 @@ import LinkSvg from "../../public/LinkSvg.svg";
 import Image from "next/image";
 export default function Info() {
   return (
-    <div className="bg-[var(--background)] flex flex-col justify-evenly  p-10 rounded-xl h-screen text-black">
+    <div id="info" className="bg-[var(--background)] flex flex-col justify-evenly  p-10 rounded-xl h-screen text-black">
       <h2 className="text-7xl ">Info</h2>
       <div>
         <div
