@@ -10,8 +10,8 @@ export default function Info() {
     <div
       id="info"
       className="bg-[var(--background)] flex flex-col justify-evenly  p-10 rounded-xl h-screen text-black"
-    >
-      <h2 className="text-9xl p-20  overflow-hidden  uppercase">
+    > 
+      <h2 className="text-9xl p-20 font-black  overflow-hidden  uppercase">
         {"Info".split("").map((item: string, index: number) => (
           <motion.span
             className="inline-block"
