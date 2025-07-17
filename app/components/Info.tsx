@@ -1,13 +1,53 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Link from "next/link";
 import LinkSvg from "../../public/LinkSvg.svg";
 import Image from "next/image";
 export default function Info() {
   return (
-    <div id="info" className="bg-[var(--background)] flex flex-col justify-evenly  p-10 rounded-xl h-screen text-black">
-      <h2 className="text-7xl ">Info</h2>
+    <div
+      id="info"
+      className="bg-[var(--background)] flex flex-col justify-evenly  p-10 rounded-xl h-screen text-black"
+    >
+      <h2 className="text-9xl p-20  overflow-hidden  uppercase">
+        {"Info".split("").map((item: string, index: number) => (
+          <motion.span
+            className="inline-block"
+            initial={{
+              y: "-100%",
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              type: "spring",
+              ease: "easeInOut",
+              delay: 0.05 * index,
+            }}
+            key={index}
+          >
+            {item}
+          </motion.span>
+        ))}
+      </h2>
       <div>
-        <div
-          className=" flex justify-start md:justify-between md:items-center  flex-col md:flex-row    py-10 items-start md:p-10"
+        <motion.div
+          initial={{
+            y: "-100%",
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            ease: "easeInOut",
+          }}
+          className=" flex  justify-start md:justify-between md:items-center  flex-col md:flex-row    py-10 items-start md:p-10"
           style={{
             borderTop: "1px solid black",
           }}
@@ -29,8 +69,20 @@ export default function Info() {
               </span>
             </Link>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{
+            y: "-100%",
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            type: "spring",
+            ease: "easeInOut",
+          }}
           style={{
             borderTop: "1px solid black",
             borderBottom: "1px solid black",
@@ -50,7 +102,7 @@ export default function Info() {
               <span>Brand Identity</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

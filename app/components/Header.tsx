@@ -13,7 +13,19 @@ export default function Header() {
   }
 
   return (
-    <header className="flex h-[10vh] min-h-[60px] max-h-[80px]  fixed z-40 w-full top-0 left-0 font-semibold p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center ">
+    <motion.header
+      initial={{
+        y: "-100%",
+      }}
+      animate={{
+        y: 0,
+      }}
+      transition={{
+        // duration : 1,
+        ease: "easeInOut",
+      }}
+      className="flex h-[10vh] min-h-[60px] max-h-[80px]  fixed z-40 w-full top-0 left-0 font-semibold p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
+    >
       <h1 className="text-xl">Theo Markin</h1>
 
       <button
@@ -74,6 +86,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 }

@@ -33,7 +33,7 @@ export default function Home() {
     return <PreLoader />;
   }
   return (
-    <div>
+    <div className="tracking-tight">
       <Header />
       <Hero />
       <Projects />

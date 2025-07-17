@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Poppins } from "next/font/google";
-const poppins = Poppins({
+import { Inter } from "next/font/google";
+import UseLenis from "./hooks/UseLenis";
+const inter = Inter({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-poppins",
+  variable: "--font-inter",
 });
 export const metadata: Metadata = {
   title: "Theo Markin | freenlacer And desginer",
@@ -18,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        <UseLenis>{children}</UseLenis>
+      </body>
     </html>
   );
 }

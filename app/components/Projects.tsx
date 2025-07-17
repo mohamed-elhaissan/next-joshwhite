@@ -37,13 +37,50 @@ export default function Projects() {
 
   return (
     <div
-    id="work"
+      id="work"
       ref={targetContainer}
       className=" text-white  h-[300vh] bg-[var(--backgroundBlack)]"
     >
       <div className="sticky top-0 p-10 left-0 w-full flex   overflow-hidden h-screen  justify-start flex-col items-start">
-        <h1 className="text-7xl text-[#befc65] py-20">Projects</h1>
-        <motion.div style={{ x }} className="flex  w-full flex-wrap md:flex-nowrap gap-10">
+        <h2 className="text-9xl p-20 text-[var(--preLoaderBackground)] overflow-hidden font-black uppercase">
+          {"Projects".split("").map((item: string, index: number) => (
+            <motion.span
+              className="inline-block"
+              initial={{
+                y: "-100%",
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              transition={{
+                type: "spring",
+                ease: "easeInOut",
+                delay: 0.05 * index,
+              }}
+              key={index}
+            >
+              {item}
+            </motion.span>
+          ))}
+        </h2>
+        <motion.div
+          initial={{
+            scale: 0.6,
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            type: "spring",
+            ease: "easeInOut",
+          }}
+          style={{ x }}
+          className="flex  w-full flex-wrap md:flex-nowrap gap-10"
+        >
           {images.map((item: StaticImageData, index: number) => (
             <Card
               title={titles[index]}
@@ -70,7 +107,7 @@ const Card = ({
   const DURATION = 0.25;
   const STAGGER = 0.025;
   const [itemHovered, setItemHovered] = useState<boolean>(false);
-  return(
+  return (
     <div
       onMouseEnter={() => {
         setItemHovered(true);
