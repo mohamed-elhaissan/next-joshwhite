@@ -1,7 +1,7 @@
-## im still working on it
+##  white Pure Landing Page
 
 <img src="https://github.com/mohamed-elhaissan/next-joshwhite/blob/main/public/screenShot.png" />
-# 🎨 white Pure Landing Page
+
 
 A sleek Next.js 15 landing page with a dynamic preloader, smooth Lenis scrolling, and Inter font for a modern, responsive user experience.
 
