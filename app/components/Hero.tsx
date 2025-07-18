@@ -30,7 +30,7 @@ export default function Hero() {
           height={100}
           alt="Logo"
         />
-        <motion.h2 className="w-full  text-xl md:text-4xl mt-10 2xl:w-1/2">
+        <motion.h2 className="w-full  text-xl md:text-5xl mt-10 2xl:w-1/2">
           <motion.span
             initial={{
               y: -10,
@@ -52,7 +52,7 @@ export default function Hero() {
           </motion.span>
         </motion.h2>
       </motion.div>
-      <div className="flex items-center justify-between  w-full ">
+      <div className="flex items-center justify-between  w-full text-xs sm:text-2xl ">
         <motion.div
           initial={{
             scale: 0.5,
@@ -119,7 +119,7 @@ export default function Hero() {
           <h3>Get in touch</h3>
           <span className="cursor-pointer hover:opacity-100">
             <TextAnimation
-              title="hello@joshwhite.design"
+              title="mhalwasoffice@gmai"
               semiTitle="hello@joshwhite.design"
             />
           </span>

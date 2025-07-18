@@ -10,8 +10,8 @@ export default function Info() {
     <div
       id="info"
       className="bg-[var(--background)] flex flex-col justify-evenly  p-10 rounded-xl h-screen text-black"
-    > 
-      <h2 className="text-9xl p-20 font-black  overflow-hidden  uppercase">
+    >
+      <h2 className="text-6xl sm:text-9xl text-nowrap p-20 font-black  overflow-hidden  uppercase">
         {"Info".split("").map((item: string, index: number) => (
           <motion.span
             className="inline-block"
@@ -31,7 +31,7 @@ export default function Info() {
             key={index}
           >
             {item}
-          </motion.span>
+        </motion.span>
         ))}
       </h2>
       <div>
@@ -47,13 +47,13 @@ export default function Info() {
           transition={{
             ease: "easeInOut",
           }}
-          className=" flex  justify-start md:justify-between md:items-center  flex-col md:flex-row    py-10 items-start md:p-10"
+          className=" flex  justify-start md:justify-between md:text-4xl md:items-center  flex-col md:flex-row    py-10 items-start md:p-10"
           style={{
             borderTop: "1px solid black",
           }}
         >
           <p className="opacity-70 mb-5">↳ Overview</p>
-          <div className="md:w-1/2 flex flex-col gap-2">
+          <div className="md:w-1/2 flex flex-col  gap-2">
             <span>
               Hi I’m Josh, an experienced Digital Designer crafting beautiful
               interactive experiences. My 10 year career has seen me work for a
@@ -87,10 +87,10 @@ export default function Info() {
             borderTop: "1px solid black",
             borderBottom: "1px solid black",
           }}
-          className=" flex justify-start md:justify-between md:items-center py-10  flex-col md:flex-row items-start md:p-10"
+          className=" flex justify-start md:justify-between  md:text-4xl md:items-center py-10  flex-col md:flex-row items-start md:p-10"
         >
           <p className="opacity-70 mb-5">↳ Services</p>
-          <div className="flex gap-10 flex-col md:flex-row  w-1/2">
+          <div className="flex sm:gap-10 gap-5   md:flex-row w-full md:w-1/2">
             <div className="flex flex-col gap-2">
               <span>UX/UI Design</span>
               <span>Product Design</span>

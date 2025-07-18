@@ -42,7 +42,7 @@ export default function Projects() {
       className=" text-white  h-[300vh] bg-[var(--backgroundBlack)]"
     >
       <div className="sticky top-0 p-10 left-0 w-full flex   overflow-hidden h-screen  justify-start flex-col items-start">
-        <h2 className="text-9xl p-20 text-[var(--preLoaderBackground)] overflow-hidden font-black uppercase">
+        <h2 className="text-4xl sm:text-9xl p-20 text-nowrap text-[var(--preLoaderBackground)] overflow-hidden font-black uppercase">
           {"Projects".split("").map((item: string, index: number) => (
             <motion.span
               className="inline-block"
